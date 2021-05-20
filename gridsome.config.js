@@ -4,14 +4,14 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-//require tailwind
-//const tailwindcss = require("tailwindcss")
+// require tailwind
+// const tailwindcss = require("tailwindcss")
 
 module.exports = {
   siteName: 'Gridsome',
   plugins: [
     {
-      use: "gridsome-plugin-tailwindcss",
+      use: 'gridsome-plugin-tailwindcss'
       /**
       * These are the default options.
 
@@ -23,5 +23,18 @@ module.exports = {
       }
       */
     },
+    {
+      use: '@gridsome/source-contentful',
+      options: {
+        space: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_TOKEN,
+        host: 'cdn.contentful.com',
+        environment: process.env.CONTENTFUL_ENVIRONMENT,
+        typeName: 'Contentful'
+      }
+    }
   ],
+  templates: {
+    ContentfulBlogPost: '/blog/:slug'
+  }
 }
