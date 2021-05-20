@@ -11,7 +11,7 @@ TBD
 
 ## Instructions
 1. If you use `npm`, install the packages with `install npm`
-2. Register and Create a space on Contentful
+2. Register and Create a space on Contentful (to rapidly test, I'd suggest to use the "Blog" example when creating a new space)
 3. Create a `.env` file to store your own API keys from Contentful (`Settings >> API Keys`) *(If you're not sure how to do this, see how I did it in the development log below)*
 4. Run `gridsome develop` to run your local server
 5. Your site should be live at http://localhost:8080)
